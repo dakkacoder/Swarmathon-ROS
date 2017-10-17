@@ -3,14 +3,13 @@
 PickUpController::PickUpController() {
     lockTarget = false;
     timeOut = false;
-    nTargetsSeen = 0;
-    blockYawError = 0;
+    nTargetsSeen = 0; // mess around with this(?)
     blockDist = 0;
-    td = 0;
+    td = 0; //mess with this
 
     result.pickedUp = false;
     result.cmdVel = 0;
-    result.angleError = 0;
+    result.angleError = 0; 
     result.fingerAngle = -1;
     result.wristAngle = -1;
     result.giveUp = false;
@@ -181,7 +180,7 @@ PickUpResult PickUpController::selectTarget(const apriltags_ros::AprilTagDetecti
 }
 
 void PickUpController::reset() {
-    result.pickedUp = false;
+    result.pickedUp = false; //this whole function is something that should be messed with
     lockTarget = false;
     timeOut = false;
     nTargetsSeen = 0;
